@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Search</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .navigation{
+            height: 50px;
+            background-color: white;
+            font-size: 30px;
+            padding-top: 10px;
+        }
+        .navigation .logo{
+            text-decoration: none;
+            padding-left: 40px;
+            text-align: center;
+            color: #16a085;
+        }
+        .navigation .logo:hover{
+            color: black;
+        }
+        body{
+            padding: 10px;
+        }
+       img{
+        align-items: center;
+        border: 2px solid black;
+       }
+    </style>
+
+</head>
+<body bgcolor="#f0f0f0">
+    <div class="navigation">
+        <a href="home.php#mainhome" class="logo"><i class="fa-solid fa-heart-circle-plus"></i>&nbsp;HealthIn</a>
+    </div>
+
+    
+    <div id="searchResults"></div>
+
+    <script>
+            const subscriptionKey = '9f41a40c13df4aeeb293366233c59ec4';
+
+            function getData() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const searchQuery = urlParams.get('search');
+                let apiUrl = `https://api.nhs.uk/conditions/${searchQuery}?subscription-key=${subscriptionKey}`;
+
+                fetch(apiUrl)
+                .then(result => {
+                    return result.json();
+                })
+                .then(data => {
+                    console.log(data); // Logging data to the console
+                    
+                    let hasPartHtml = '';
+                    let firstIteration = true;
+                    if (Array.isArray(data.mainEntityOfPage)) {
+                        data.mainEntityOfPage.forEach(part => {
+                            if (!firstIteration) {
+                                if (part.headline && part.description) {
+                                    hasPartHtml += `<h1>${part.headline}</h1>
+                                    <h3>${part.description}</h3>`;
+                                }
+                            } else {
+                                firstIteration = false;
+                            }
+
+                            // Check if there's a nested hasPart array
+                            if (Array.isArray(part.hasPart)) {
+                                part.hasPart.forEach(nestedPart => {
+                                    if (nestedPart.text) {
+                                        hasPartHtml += `<p>${nestedPart.text}</p>`;
+                                    }
+                                    // Check if the nested object is an ImageObject
+                                    if (nestedPart['@type'] === 'ImageObject' && nestedPart.url) {
+                                        hasPartHtml += `<img src="${nestedPart.url}" alt="Image"><p>${nestedPart.name}</p>`;
+                                    }
+                                });
+                            }
+                        });
+                    } else {
+                        if (data.mainEntityOfPage.headline && data.mainEntityOfPage.description) {
+                            hasPartHtml = `<h1>${data.mainEntityOfPage.headline}</h1><h3>${data.mainEntityOfPage.description}</h3>`;
+                        }
+                    }
+
+                    document.getElementById('searchResults').innerHTML = `
+                        <h1>${data.description}</h1>
+                        ${hasPartHtml}
+                    `;
+                })
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                });
+            }
+
+            // Call the getData function when the page loads
+            getData();
+        </script>
+</body>
+</html>

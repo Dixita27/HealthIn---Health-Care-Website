@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Dhamanjaya D.</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+    }
+    .navigation{
+            height: 50px;
+            background-color: white;
+            font-size: 30px;
+            padding-top: 10px;
+        }
+        .navigation .logo{
+            text-decoration: none;
+            padding-left: 40px;
+            text-align: center;
+            color: #16a085;
+        }
+        .navigation .logo:hover{
+            color: black;
+        }
+
+
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f7f5;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #333;
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .schedule-table th {
+      background-color: #f5f5f5;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #0056b3;
+    }
+
+    .main_detail {
+      display: flex;
+      align-items: flex-start;
+      border: 1px solid black;
+      height: 130px;
+    }
+
+    .logo {
+      margin-right: 20px;
+      border-radius: 50%;
+      width: 100px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+
+    h1,
+    p {
+      margin: 0;
+    }
+
+    .text-container img {
+      height: 25px;
+    }
+
+    .about {
+      margin-top: 10px;
+      border: 1px solid black;
+      height: 235px;
+    }
+
+    .about img {
+      margin-left: 5px;
+      height: 40px;
+    }
+
+    .about h3 {
+      display: flex;
+      align-items: center;
+      margin-left: 2px;
+    }
+
+    .about p {
+      margin-left: 10px;
+    }
+
+    .doctor_card {
+      border: 1px solid black;
+      margin-top: 10px;
+    }
+
+    .doctor_card img {
+      height: 40px;
+      margin-left: 5px;
+    }
+
+    .doctor_card h2 {
+      display: flex;
+      align-items: center;
+      margin-left: 2px;
+      font-size: 20px;
+    }
+
+
+
+    #doctor-clinic {
+      column-count: 3;
+
+
+    }
+
+    /* Ensure the container shrinks to fit its contents */
+    .doctor_card>.container {
+      display: inline-block;
+      width: 100%;
+    }
+
+    /* Display the list items in a single column */
+    .doctor_card>.container>.f-listBX {
+      column-count: 1;
+      padding: 0;
+    }
+
+    /* Prevent list items from breaking across columns */
+    .doctor_card>.container>.f-listBX>li {
+      break-inside: avoid-column;
+    }
+
+    /* Ensure the second column stays intact */
+    .col-md-5 {
+      break-inside: avoid-column;
+    }
+
+    /* Ensure the third column stays intact */
+    .col-md-2.col-xs-6.pull-left.clinic-fee.clinic-fee01 {
+      break-inside: avoid-column;
+    }
+
+    /* Apply border to the first and second columns */
+    .doctor_card .f-listBX .col-md-3 {
+      border-right: 1px solid black;
+      padding-right: 15px;
+      /* Adjust this value as needed */
+
+    }
+
+    /* Remove border from the last column */
+    .doctor_card .f-listBX .col-md-5 {
+      height: 50%;
+      padding-right: 0;
+      margin-top: 10px;
+    }
+
+    /* Set height of the parent ul element */
+    .doctor_card .f-listBX {
+      height: 620px;
+      /* Set the height to auto or specify a fixed height */
+    }
+
+    /* Style clinic images */
+    .clinic-image {
+      margin-top: 10px;
+      height: 150px;
+      width: 100px;
+    }
+
+    .col-md-5 p {
+      margin-top: 10px;
+    }
+
+    .consultansy_fee {
+      margin-top: 10px;
+      border: 1px solid black;
+      height: 170px;
+    }
+
+    .consultansy_fee h3 {
+      margin-left: 5px;
+    }
+
+    .consultansy_fee p {
+      margin-left: 35px;
+    }
+
+    .consultansy_fee li {
+      margin-left: 10px;
+    }
+
+    .speciality_service {
+      border: 1px solid black;
+      margin-top: 10px;
+      height: 300px;
+    }
+
+    .speciality_service p {
+      margin-left: 60px;
+      display: inline-flex;
+      margin-top: 10px;
+      border: 1px solid black;
+      height: 25px;
+      width: max-content;
+      padding: 4px;
+      border-radius: 5px;
+    }
+
+    .speciality_service h3 {
+      display: flex;
+      margin-left: 10px;
+      align-items: center;
+    }
+
+    .speciality_service img {
+      height: 40px;
+    }
+
+    .Education {
+      border: 1px solid black;
+      margin-top: 10px;
+    }
+
+    .Education h2 {
+      margin-left: 15px;
+      font-size: larger;
+      font-weight: bolder;
+      display: flex;
+      align-items: center;
+    }
+
+    .Education img {
+      height: 40px;
+    }
+
+    .Q_A {
+      border: 1px solid black;
+      margin-top: 13px;
+      height: 300px;
+    }
+
+    .Q_A h3 {
+      margin-left: 15px;
+      font-size: larger;
+      font-weight: bolder;
+    }
+
+    .Q_A p {
+      margin-left: 15px;
+      margin-top: 5px;
+    }
+
+    .book_apintment {
+      border: 1px solid black;
+      margin-top: 10px;
+      height: 120px;
+    }
+
+    .book_apintment h3 {
+      margin-left: 10px;
+    }
+
+    .book_apintment .cta-button {
+      margin-left: 10px;
+      background-color: #16a085;
+    }
+
+    .book_apintment .cta-button:hover {
+      opacity: 0.82;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navigation">
+    <a href="home.php#mainhome" class="logo"><i class="fa-solid fa-heart-circle-plus"></i>&nbsp;HealthIn</a>
+</div>
+
+
+
+  <div id="doctor-details">
+
+
+    <div class="container">
+      <div class="main_detail">
+        <img src="https://doctor.myupchar.com/122219/buhiuh.jpeg" alt="doctor img" class="logo">
+        <div class="text-container">
+          <h1>Dr. Dhamanjaya D. <span><img
+                src="data:image/webp;base64,UklGRv4BAABXRUJQVlA4WAoAAAAQAAAAIQAAIQAAQUxQSLAAAAABgBDZdt3mQjCEQHgMbAhiYDHJg/AYNBAMwQxaBhYDicHtR7V0gyAiJgCj3krC9OQGBEnuWHbfJjjJq/JuGqscPocyJ9qtNUedwY/n/s+LwugsVNY3KB1Izo5JaADWS1OfyJRH1bWiO5KsPfClOoBD9YkH5enQXdS30AW8acoGwDSGv6cE3esNKF06oQj0s7+mtNgNd21Gwug51jCcbrVC0sewegbynwDMN0xPpTlGAVZQOCAoAQAA8AcAnQEqIgAiAD6JOphHpSOioS47/MigEQlsBigA/WyBz5FNvKfjBhBGgGsAegB+gHWYkQrupS8BxsC8XUfyNXV7phnFEWBAAP7N54YkBXs4xeCUpVfrW4DnPPqHPXRmzx0njeCmliEu/Zn7NyfZ8zxTXTFcICdc6zQGHe5uZqhzvTt00S3BpKLNVCBABUoDZMkJ7s2///ZbPHWboO4/wcV2g7j/BxVV4j3yd71DXPL112osmUCG3tW161CuazDlJBGyr+1V1OrNTCsr54ZaSjYyC/2TatNybFdr2ZlFjxmtBSjP7lWVlWLLeQ5783UJ//+w2Nz8N3ZdvE4KH//On4HI2MbhDn/O/lM3GSqO/cno/6wiLGI4I28mOngzoDYxBhPfAAAAAAA="
+                alt="" srcset=""></span></h1>
+          <p>Nutritionist</p>
+          <p>Dietician, DNB
+          </p>
+          <p>15 Years of Experience</p>
+        </div>
+      </div>
+
+      <div class="about" id="about">
+        <h3><img
+            src="data:image/webp;base64,UklGRtICAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAQUxQSH8BAAABkONse9tIH9xNIuB6clqVo979YC+gygeY2G8UwAMMoMoHcMkLqJ3Qbpo8Kjfn3YkE1P2TRf7fBSJiAhC+s1SUu1/q+stuWSx1oDzJd6TxTp6omc2PJPBRPqthtuclou/NRlv3EtmvxpncFIWbkxGyc1F52g1lnKjtDwQxpSguBwKMHonqN6PNnCh3jayof9ZgUQifPmrhnOE8eUSrEsqj1kNLQrr0QPsPy29znxVae4855Tk1d6wQ2zsVUwUgFeoUKLgKYJdrF5NC3u6yZZbNOja3x/bmI9vHn2w/a7aa7yfbz49s1Ru2N47NWTbbZcsm2Qx2uXaBDa4NIOVKAVRMFQC8Znp9x5zynJo7sDwW95rfLH/MfVhiWcKDrSOON62HkHqG8wU8NmNYxONf63uGpk6bQ+OBN7reDDSDKTWVAwja19NH6O65jtMM4Wc3NWyOIuqqj+XXEXuy52P43iQUtp9VoapnbWhN8p1G9WaeQHlnqSh3v9T1l92yWOogPABWUDggLAEAAPAHAJ0BKkAAQAA+kUCaSKWkIqEsFVswsBIJYgDSY5gl4EDW+6+hMTrSpcg32glpc8nxNR8HsqCGmgIJRFRWgRqTNDhZFLJsAAD+8Jif/44f/+P5P//HouDvcQvOnaETH/wnkRFSVSuU0xi+7o3w0KeQAVVeNXIMOdISjKqk9BL6FEvScDgAV6vG2IrWhxpBAFj2wNfGKFZDCie5JcHz6/eLUythJiIFL/MRVL+TepYJ086TTTKYJHa2YFayj2CnTePRh6rNJ97tGD56vofUqvSHiwOx75y32+3VpJsGvOYTDJdHAS9UW4BoF6QzTkG1lD4Heo12FebFwdoaUylvSQSlN1sLEIYJmNg2GniH4P32cG81FpLkQpt/9py/8J6/E9m//8MLiQp3UAAAAA=="
+            alt="" srcset="">&nbsp;&nbsp;About Dr. Dhamanjaya D.</h3>
+        <p>He has been practicing medicine for over 15 years. Dr. Dhanamjaya D is now working with Nutrilite Health
+          Institute . Dr. Dhanamjaya D specialises in Movement Disorders, Memory Loss. </p><br>
+        <p> He is well-versed in Chronic Headache and Migraine , Hair growth Treatment. He is also experienced in Eye
+          Infections, Macular Degeneration.Apart from hospital affiliations, he has been working actively in various
+          fields. </p><br>
+        <p>Dr. Dhanamjaya D is the recipient of Masters in Nutritional and Wellness Adviser , Integrative Dietetics . He
+          earned his Dietician from King George University Lucknow. He also has a DNB from King George Medical
+          University, Lucknow.</p>
+      </div>
+
+
+
+      <article id="doctor-clinic" class="doctor_card Doctor_profile-bx">
+        <h2><img
+            src="data:image/webp;base64,UklGRrIDAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAQUxQSGYBAAABkCLtf9xmP9pNMzmAoLAPEN75LmAU3v0AZv8LdMYoBwjrRhNs/m1iol2YUTeNy/5dvfx/F4iICcD484N6HR+67iGu64M5jAdpdHAjwUyQpCMnCRbCMuuEeRkmO8s6cT6exjdqsPETlFlNPi7GchdqdrU1ituo4c3WCD6p6d9+2I0avxgkar4asK+Ev3oVjwyPoU9SytTjWEmPf5i1LK37TpRWvnGPPI/uiyixfElMCUCh1AVQc9VA5IrwSj5bsJXCJhdsF5Ht9y3bbcvWvrG98bVs7S1b+s32+4LtQthkwVZ6NofIFYFzrnOg4CoAJKYEAMIkX9wjz6P7AuERfOtaltZ9h2OWY/ycOH6jZ9ExPBZ9UDLso39lr8LQC2s3GLz129bvrWFwG0ubLYy6srPC2Its47HE+KGx0HhMepynymeY2i/zFHnpYXBWpbFSNYPVIM2grpEA4/ODeh0fuu4hruuDOcYHVlA4ICYCAACQCwCdASpAAEAAPpFAmUglpCKhKA1QsBIJZADMiADMQCoegB0r2AAbRtUFPHoT9x3qBKghmpuSfE5f51s3K2AyQ9ekTxsfbw87Fug5Q3oXk+JSZ0j6uh0nMDpdx/AbU1BBqH2SYAD+8MGf/5aH//LD///lYw5t/7kzwUSkx/vvDqdrvpqf8YnD/8b1+xpxWCLOG5Vyhcw/0PzN/uwz6Ac2F9/8FINYwAnI2SNBFhWgpPHxv2Yus7tL1jCPME/1IYBG5/MseTVpeaaUKvT6aph3E+zPxpzKtWO/YfE/1UcZzADy1JxwJGVDi6D+8+1SmX5iUUfT0nKMOxOs2u4b+IBay3TeC5v7xFq2X9EpnDfp7cSSt8h3NkhrgPmvjyFZGz6Ju0n1fH4+A8wfS9TJQ+J7JSINgfsqhfsVh6rfvsSmQ+jMcVQNV7unKX3hufqK0m131MpxjqsiswtvZAWdABy0nX99FEB41c5QcNq1WlQsNVP4wQrH330j2MrqEN4sfezOP4QtgyFGG1jMB5Wll1ERISb2fhlr/VM/yyAhpgYcsp9D3BD28L4RoyZaJ2XAryJNcwf1Y7lbRtE5xm41e/fdrnwfYm02ybAG2hZIyI1dZR7kEf/PltuV1pb8YOtfKXJuRax40aGzzfeC5BOQDFfsYOacIW8AG8U0bEdk5jIduVlkf1OvPMmPn2b5P1jvgMf+vfXSlsaKSrt/hk5i3/8aCkmU4AAA"
+            alt="myUpchar Clinic"> Dr. Dhamanjaya D's Clinic(s)</h2>
+        <ul class="f-listBX b-bottom">
+          <li class="col-md-3">
+            <p class="clinic-address"><strong>Moon Diagnostic Centre and Clinic</strong><br># 4-7-102 / 1 - Beside Bajaj
+              Electronics Hayathnagar<br>- R R District - Hyderabad - Telengana - India</p>
+            <div class="pull-right map-d text-center"><br>
+              <img
+                src="data:image/webp;base64,UklGRowEAABXRUJQVlA4WAoAAAAQAAAAPgAAPgAAQUxQSN8AAAABgKJt22LlRZq7pYnEfwHYTphIk0aD6A552MFp5NnBgRUw0uWchL/Y2P/iKSImABY7K42AzPyGOwjBRZ9FfWPboMey3qBVJmD5prHIZKwyM9YMZqw2GLTFZ9XNDwaXNmreYvUuAHPDuls1BICTUtnFBaU9pFoZKO6oLf7oBsUCiB2pGTEfYotiR9DyoXU1qJU50DLQWoUYfsOetJInatX4T+xZ7Jlaz9R6ptYttW6plVIx6c5pp9Qcz4kp2iMWIPdcZC9vOLat/S7oycP0pWUMyOtxFJ5ZXt+0em22GwUBAFZQOCCGAwAAkBQAnQEqPwA/AD6RPJdJJaMhoSwYDACwEglsALElQVeeBP2zzVKn/UPwZ64OW6Nb2IYr/Ux5gH6e9IjzAftD6ynpT9AD+Z/6rrHfQA8sz9vfhA/cH0qnKz7J5QPB7SXs1lL7vkcrEcfB81uWMPpiJhP3VHhG5CA0Wcys2U7cj3spfH3kqbsLIjS2ehdV6/t6EwLfa1fyGvP0M1+BybYhNcOB1X1y+yOXDIEQG8gA+dLa+pI7rg7beOcg8RrQBkXzQw3xLAPSdzQbrbSVLAWruZ07teDY3Q9r5QTR/hjC+aCCPubRU6lU8eB3ze9U2XiOeUifZWqhNAc6Uk0e5Ms9JR8xkxY46GPuFwe2aJMWL+pDBWIbQZ/7UR8f88Sp7iS4leif5YCWuCBz2kf5yTg3Hut82yARq1N4JlY1+tt1eLk1okMSGXIj3l+QSNR1YbyySoX/cT2oiT545lOhV6AUZ+t75N9dWEEvMAFUH6Spdquqg2nyi3rtdF79rxu+5egsLTet1oaAZuOgZ2K3X3/vnkMPC3gHuo4EKZfmineEn+UfjkFqe6HE6utD4oFUFVg41G7lmb3k3Y7LBhKKoA6JVbnuobGFM06/Vl4XdTkPQE+6dnek8Pf/Z+U1bHfY2bgyNtMUJOKfi5PGptmAdnXL2DQCXNtEdV992m4HkYMA0tlu3b8tsV1vuusaWOdmOcUQHPl6dgEKV84gN1VAZOYpa+L16JqHVFbEWdXzZYBprs9bDaKvCRcjU/1cTtINGxmfA4h+YffSSiPX4r8J+W/ZyL6X8TH8lveSzXLu4C2kAIV/L09L+dZwR3T2EcF65r5S6vZOfP1MBUFTXqc9MY3VMDT7mWVFMd12IzTQr/en8i5u4bhROV8DlEeou4KEKKEQqRpvIwbjE4rb/mY0E/TUkrAiumb/paa/YrFSWbBCgxBkQH8e/ngorOdfan/1CUD5oKfFICMXM9fp9KPgT7zLuE1MC9Oz/ntD8+cPkDczsrCKCGpYF49uQzOnP45AhdBk4ABnEYAFF4pbXptU/CL0Pq/p7oezFr47W2SpWN5LzTHH3S+J3SBBqT0TSl3n3IEklr0/sF4HXiTk3++7sZ2IGjs20ddEuBsqvdjQjESoQilXO5Vdp76VmQX/AaQnat31Rix+lhDYW8ngNZc1UXBQLlDkbMwYa4V1HbIwFvHsTIYYL6IIAAA="
+                alt="map">
+              <a href="https://www.google.com/maps?q= 4-7-102 / 1 - Beside Bajaj Electronics Hayathnagar - R R District - Hyderabad - Telengana - India "
+                target="_blank" title="lab direction">See Directions</a>
+            </div>
+            <div class="clearfix"></div><br>
+          <li>
+            <p class=""><strong>Clinic Pictures</strong></p>
+
+          </li>
+
+          <img class="clinic-image" data-id="73388"
+            src="https://doctor.myupchar.com/clinic/73352/IMG-20231125-WA0003.jpg"> </li>
+
+
+
+
+          <div class="col-md-5"><br>
+            <p style="font-size: 25px; margin-left: 170px;"><strong>Day and Timing</strong></p>
+            <div class="row">
+              <div class="col-md-6 col-xs-6">
+                <p>Monday<br>
+                  <span>
+                    <i class="fa fa-clock-o"></i>Mor : 11:30 AM - 01:30 PM
+                  </span>
+                  <br>
+                  <span>
+                    <i class="fa fa-clock-o"></i>Eve : 05:00 PM - 08:30 PM
+                  </span>
+                  <br>
+                </p>
+              </div>
+              <div class="col-md-6 col-xs-6">
+                <p>Tuesday<br>
+                  <span>
+                    <i class="fa fa-clock-o"></i>Mor : 11:30 AM - 01:30 PM
+                  </span>
+                  <br>
+                  <span>
+                    <i class="fa fa-clock-o"></i>Eve : 05:00 PM - 08:30 PM
+                  </span>
+                  <br>
+                </p>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="col-md-2 col-xs-6 pull-left br-right-1 clinic-fee"><br><br><br>
+
+            <div class="col-md-6 col-xs-6">
+              <p style="margin-top: 10px;">Thursday<br>
+                <span>
+                  <i class="fa fa-clock-o"></i>Mor : 11:30 AM - 01:30 PM
+                </span>
+                <br>
+                <span>
+                  <i class="fa fa-clock-o"></i>Eve : 05:00 PM - 08:30 PM
+                </span>
+                <br>
+              </p>
+            </div>
+            <div class="col-md-6 col-xs-6" style="margin-top: 10px;">
+              <p>Friday<br>
+                <span>
+                  <i class="fa fa-clock-o"></i>Mor : 11:30 AM - 01:30 PM
+                </span>
+                <br>
+                <span>
+                  <i class="fa fa-clock-o"></i>Eve : 05:00 PM - 08:30 PM
+                </span>
+                <br>
+              </p>
+            </div>
+
+
+          </div>
+
+        </ul>
+
+      </article>
+      <div class="consultansy_fee">
+        <h3>
+          <li>Consultation Fees</li>
+        </h3>
+        <p>₹800</p>
+        <h3>
+          <li>for <span style="font-size: 20px; font-weight: bold;">HealthIn</span>&nbsp;members </li>
+        </h3>
+        <p>₹600</p>
+      </div>
+
+
+      <div class="speciality_service">
+        <h3><img
+            src="data:image/webp;base64,UklGRlQDAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAQUxQSHkBAAABkCPbtuNUJ8W9KsV42yGdK6eYQEcaAC73vKo3gs40AGW4VEoxqfd0CHxv8Tyyi21zzwQiYgKQf3ksrh988f7LQT0eK0N5YLck85YN1PTbU8n51PZrGKh6KdBXBwqbupeC76eK6V4XhevdBUT3ovK6kpdZErW1plxMQxQ3mnJoPxXV2+3Z1kT5UiYn6mczjAjhaKrha4brIE0ilKcpxoR07JPSH5Y/5iMntO4Dc81zbd45IXbvEqYEQCjUIRBzxcAB1wG6hbxUYYscm1tiWzpg275gu/jJ9vOZ7ZnvJ9vPC7Zkm217iW3JsbkKW9TNZnDAdQDEXDEQcoUAEqYEACyTfWeuea7NOzgehw/NH5Y/5iOMsYzh81OObaQMPcP1cBpEDCNIb/XNIuuStjVkbtrWtd2UDaahqdGEXGt6asi7cq/jOkL+/esa1ttR6NR9UfdTKLq76ovw1W4oLE0neSXTJWgN7FYmv24DKC+PxfWDL95/OajHY2XkDwBWUDggtAEAAPAKAJ0BKkAAQAA+kT6YSKWjIiEoG/1QsBIJZADRoaA7E3CO8wegB0peAAMUG+BpAmaTp8j0cfQtRJ6xLl/Y3UifU2DcAIy8ATWi7UqBm+gaOjyrUwF5hG3E8hlxRiKXAAD+8MGf/5h///MDP//l4ze4yVvLecUKUhlyOkAeU2gxGQ+hKPikl0bvjFTH3owooGHgNjGnR0z+MxHDUDP7lg5Z/neZGiveSrS9crdzeO8BkqZXXmxJduPBcInGzpmechhMYpMne3KUxK7ctULzDWDRaAiHQjy+aHdY2hG4ta0eWboHfAOV4Y3kUlxrabFnrsSY9WUUs51y/yop/sM5KYFN8xwT38NyQVBjqdux9qsJ7FJhCFOR7AsDH+xJ3DkAJy7RwU66kvb4JmQY+E1uZVRhOqPXczUTrdaTv2u1vMa6OwA9QE+z72KT4CtfJVW5HTMBMJQHTFYw7nyW6nT3egun4Ii/kBWrBRRI1NvMaye+i/UpiENtxpxRxsRYmrzp1pRpAytDv997T3DdvzUwwSFaz8zHDYM+HUHqPS0el5NWTa8QcAqoC4lsf/+PPgJ5pggAAAA="
+            alt="" srcset="">&nbsp;&nbsp;Speciality</h3>
+        <p>Cardiology</p>
+        <p>Oncology</p>
+        <p>Urology</p>
+        <p>Ophthalmology</p>
+        <p>Ayurveda</p>
+        <p>Nutritionist</p>
+        <p>Alcoholism Treatment</p>
+        <p>Genetics</p>
+        <p>Allergy and immunology</p>
+        <p>Piadiatric & Gynaecology</p>
+        <p>AIDS/HIV Sexually Transmitted Infection</p>
+        <p>Yoga</p>
+
+        <h3><img
+            src="data:image/webp;base64,UklGRjoDAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAQUxQSIMBAAABkONsm9tGH9Q5DaDaObLkAdQbvgAr9c69qgHmAAZY6QDqnFqpZm/vrrNZs9rsnMPvzJn/u0BETAD812bT9k5xc1PstNPZGpRHNpPSmY3UjNtD8XxoxzWMN28k4E1zPNjyhQS+WAwznInCbDhAciEqT+q+zKqobfV4MR1R3Ony0H8oqrf6y22K8tVSTtQ3Skw/6Xua+VJ8IoQn0RcquVAeVj6bF9L5T6p/WP70fOSE1n1gTnhOzDsnxO5dzpQDiIU6BlKuFNjh2sGwcD9V62SSODa3yra6w7ZVsBU/2X7est3y/WT7WbDlW2xbq2yrjs3V2ZLhJzKDHa4dYIVrBYi5YgA5Uw4Alsm+Myc8J+YdHI/Dh+YPyx/zEeZZ5vFp5ZBjq/IZ4huGkxhfTQiepvF1q6+BsqvaNlG6a0vXVlc5mI6mThe8tvS04Lt+oeMkgf/xTEPWj6CLF6EulhF6uHkT4qY5DIXVRu4rb1ShNbJZqZvMRlBem03bO8XNTbHTTmdr8A8AVlA4IJABAACwCQCdASpAAEAAPoU0l0elIqIhMfqskKAQiWQA0Te4TBonO83ESgkhdHogomxREfWNByBqce3jUH5qqlT8ESZ1vft5dDY1YHdckE5+bcavWeU8DSgYAAD+8Pf//5/3//PzH//nxeTLfGtBa7EMnme1fvT2HKOmGOJIWtKRmg7e5A58k9mI+rHAIV0UN6C//ZuN7UnJRRj3vyl+SkSFT4s0qxpJF1G/p3omn9m9IAuwlWn00pD/jUQO2LfxjK25Qh0zLtPrUX5fes4R8pnMSoOvsRGaqKVrb8O0m7v+p/OAie6m/8nsRr2ktrdUdjkMjmJZj6L/7Hkg6KNO/9UwxAyVo8LRn2TRQy6FX//GGFncTlLSH1uGP71TDU9/iyZFlRWFo+pHqHWOFD41hMCDJ2NgZ/f1wV7uX+S4p755FE9DRngB8KBAu9jUqa39wiWFELX3bN+9CfBdE+VIsbIoDGaa4McREPI5m0aZ6v+f/pQ84VaaIKtovaG46xSOiI1ZAO7w03xNRLf/+IdVa1qcAAAA"
+            alt="" srcset="">&nbsp;&nbsp;Services</h3>
+
+        <p>Weight Loss Treatment</p>
+        <p>High Blood Pressure Treatment</p>
+        <p>Infertility Treatment</p>
+
+
+
+      </div>
+      <div class="Education">
+        <h2><img
+            src="data:image/webp;base64,UklGRjgDAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAQUxQSHoBAAABkCNte9tG36hzwoxqZ3t3WfIA6nWCzds796owgxOw0wFU4gBS69BucjZrVpvXCUN3vzOB/7tAREwA4ndWiuF+VdfV/rBY6UB5Zvek8Z7N1CzbE4l8Ypc1LPeDJAz95WRbQRKH9TTz26Jwez7BuyAqzz/FMl7UDsaimJEoHo1FmD4R1Z+nm3lR7hs5Ud9r0BXC7rPyc4bz7BmtUihPWk+tC+n6E+3fLL/MY05o3SPmnOfcPHBC7B6UTCWAXKhzoOAqgH2ufcwLefsT22vH5jyb32f7XLFVP9h+3LDd8P1g+1GxlZ/ZPns279jcJ7bX82wG+1z7QMFVADlXDqBkKgHAMtkH5pzn3DyA43F41Pxi+W0ewzrLOp5snXB8bj2FvGY4z/HctwxdPN/q66Gp1+bReOyzrs9jzWBGmkZjiDrQM0DsT0HH+TvEX97WsD2NpOshVdhC6vl+SBH681DY7pWxyl4bWjO716jethmUd1aK4X5V19X+sFjpID5WUDggmAEAAJAKAJ0BKkAAQAA+kTqZR6WjoqEuGSuIsBIJQBlGAvXFy1VksYBX/TfoAMXxAsF0rB+xSRZtP66J8eUR7XUeExOxuAAO8W4s/f2Of9ea9tUjFyTLpkXsrlMN2Ib/AAD8FDYKRrjCTqbRvxBMOlQQ2e0RsYV9K7K8JK0v+knH4wsrv4WKdXXryKWC703BUSh2hk6vS4cGdpJycOqR7i2nplatguVpCiyPvDcIrVbVWxpLxeKRNQZ+59CViC6s0I+XiSruynwn2iYmiUsoX9wMuvC9Op1H4So9PUw60x9VFmtYOfKh17b6S4qWt9t/4exzQ/NdyQ3GKjDyRJvcY6sLUlTnhfTbi+fDMYYryz8agYxicdXSFH/UKvnw5EYdaWBYmeiF0jld/zrlGH9kMCGnlt1nULRhfF94bm0+VeYy1VUpMFkBDpuVfkqa2rJPvCLd5EDvipokMe3L9RbnT3YrZX4Vjf96by+TPK4n1YlobysGV6mWQ3BY0ztSHc7478UFCebCZfxIMI0R2Wo2U8h96TjfjQT22DwAAA=="
+            alt="education">&nbsp;&nbsp; Education</h2>
+        <ul style="display: flex;">
+          <li><b>Dietician </b><br> King George University Lucknow - 1997</li>
+          <li style="margin-left: 150px;"><b>DNB
+            </b><br> King George Medical University, Lucknow - 1997</li>
+
+        </ul>
+      </div>
+
+      <article id="doctor-experience" class="doctor_card Doctor_profile-bx">
+        <h2><img
+            src="data:image/webp;base64,UklGRigDAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAQUxQSHcBAAABkOP+f9tWP2hLI+A59VWNOoD34F1Akw+QunsiwBNo8wE88gJaU0ZN6dGsMeV1Atr+6SL/vwtExAQg/ninqs+6vu/O6mpnDOW5PZXBpzZX88VeS+Rr+0XDl1mQhGH2JVV2GCRx2M+SbB6JwqPNBGUQlT8nsYwXtfOFKKYWxfVChNVrUd2sDvOi3A9yon46YFsIf3yo+M3wO/9A1grldfbejpDuvDO6Y7kzbzmhdW+Ynzw/zSsnxO5Vy9QCKIS6ACquCjjjOsO6kI8mbKVjc57Nn7E1HVt3x3bXs/V8d2x3HVt7xtZ4Nu/Y3ISt3GQzOOM6AyquCii4CgAtUwsAlsm+Mj95fppXcDwOb5o7ljvzFnZYdvBuds3RZO+hCAy/C3y0ZNjGx62+KYZ6bR6DFxpdzcIwmFpTvYCocz1zxJ4EHT9LxP9ypOFoFSmz/ZAqHGZIvDkLKcJsEwpH0zZWOx1Ba25PB/VHNofy8U5Vn3V9353V1c4Y8QEAVlA4IIoBAABQCQCdASpAAEAAPo06mUelI6KhMBgMAKARiUAZxYLNl5ZPJXsW6K5jHfZ5969ndKObSX4jnv8ncqXtQx5ZNlTB2b5WKEoWJw6gIWwD0q5Cbz++aAD+8NSf/5aH//LD///lY5NYU7AplWWYYP/yfDgQ+ofOze8ESy/Hq3bz9SIUDjlxjE3G2bYHc+pg/v/8EVtnx/tK05zE9VtSkJdc2hIMScAzwlR3A9J8QFZezrJi6+9pma+TEJt+8smJ7KQzj7dzwuuknXMX6kD7ZH/Lyog/D4fFL9z0SKSpoQ7LdO1eqhbmtG8wY9DINWylfJjLfXHqoOqpfDMH9Z5l0kZRLnligvTidNsdyUqDB3FXh8cDeSE3FUo4B3bTEJ8X5gN3MJ5UBi3gSEFnFkWtFDw8ULlv2WXZo/GQqU/8IZ2F+LKnjlBmsLWXj2A84AcUf2+HTjRb4Y53Dj/5G79lrfXaKN7SSWUvSel7tw3RuM0t0cvIUmNX/5yQ1PZ0NPKz54Zxu9n//xoLHMUqgAAA"
+            alt="experience"> Experience</h2>
+        <ul>
+          <li><strong>Dietician / Nutritionist</strong><br>Nutrilite Health Institute
+            <br>
+            14 - Present
+          </li>
+
+        </ul>
+      </article>
+
+
+      <div class="clinic-info">
+
+      </div>
+      <div class="Q_A">
+        <h3>Common Questions & Answers about Dr. Dhamanjay D.</h3>
+        <hr style="margin-left: 15px; margin-right: 15px;">
+        <p><strong>Q:How long has Dhanamjaya D been practising for?</strong></p>
+        <p><strong>A:</strong> Dhanamjaya D has 15 years of experiences in the field of Neurology, Gastroenterology,
+          Urology, Ophthalmology, Pediatrics, Dentistry, General Surgery, Transplant, General Physician, Ayurveda,
+          Other, Nutritionist, Dietician, Infectious Disease, Hematology, Radiology, Allergy and Immunology,
+          Laparoscopic Surgery, Plastic, Cosmetic & Reconstructive Surgery, Sexual Medicine & Marital Therapy, Sports
+          Medicine, Obstetrics & Gynaecology, Diabetology, Veterinary, Yoga, Beauty, Multispeciality, Cosmetology,
+          Pharmacy, Pain management.
+
+        </p>
+        <hr style="margin-left: 15px; margin-right: 15px;">
+        <p><strong>Q: Where is Dhanamjaya D's clinic?
+
+          </strong></p>
+        <p><strong>A:</strong>Dhanamjaya D is available at Sandhya Childerns and General Clinic in Gsi(Sr) Bandlaguda
+          S.O, K.V.Rangareddy.
+
+        </p>
+        <hr style="margin-left: 15px; margin-right: 15px;">
+        <p><strong>Q: How to make an appointment with Dhanamjaya D?</strong></p>
+        <p><strong>A:</strong>You can take an appointment with Dhanamjaya D for online consultation or for an in-clinic
+          visit via myUpchar - just click on "Book an appointment" above!
+
+      </div>
+
+      <article id="doctor-awards" class="doctor_card Doctor_profile-bx">
+        <h2><img
+            src="data:image/webp;base64,UklGRvYCAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAQUxQSH0BAAABkONse9tIH9xNIuB68iaVo979YC+gygeY2G8iwBNs3j2AS15A5aR20+RRrWrzRALq/ski/+8CETEBiN9beF1u101Tb5evF3pQntktab1lMzUP7YFEPrAPNTz8HCRh+PQw2WqQxGE5zfS6KFyfTlCcicrjfizjRe1gKIopRXE5FGH8QFR/GW/nRblv5UT9sxbzQvj0XnNnDMfZPTqVUB507loQ0oU7un9Y/pjbnNC6W8wxz7G54YTY3aiYKgC5UOfAO653wDbXNqaFvNtnKxyb82x+m+1LzVb/ZPvZsDV8P9l+1mzVF7Yvns07NtdnK6bZDLa5toHXXK+BnCsHUDFVAGCZ7A1zzHNsbsDxONxq/rD8MbdhgWUBd3YOOL507kIeGM7mcN+CYR73t/qeoa3X5tF66IuuL0PtYEpN5RCiDvQMELt/puO4QPyH6xrWx5F0OaQKq0g9/SmkCJ+nobD7rIpVPetCa2a3WjVrNoPy3sLrcrtumnq7fL3QQ3wAVlA4IFIBAAAwCACdASpAAEAAPpE6mkgloyKhLBqrMLASCUAaEIH58ISveWAcd3syLNqLKbugYxnHw6XEmQHGLOkGbehFBExT3x70NQvmmGPzcAD+8Jif/44f/+P5P//HofEQ2z8KeyGK9/3VSQzsCPFx6IPzupLQ5+2329Q5LRx4/P2f/8xWYynUvnNnNsMwU72I3aFDUQpQAu8MkAATHZ+OWbbgVIDh9qKP5KvAce/RQaZbobp3Va29UpdPZjX1Z88V+W2ET0EruvN2lJ2P1hNBzXZNgz7whP2mmwYHhxLTS0ZBACXGOpxuPOUNVZ0K2vyMqjUaKTOIJ+MKUt7FucRpiqicjWnUjcTb95XPEdt9lHUulAZB3ZkhHAxihQdDeXpb5Uv10QXyAsz2JLm/Qz2+AfcSOxW2Z7xdRS/8AT9RA4s2DH/yIs/I7erkrrH//4YWR00ckAAAAA=="
+            alt="Awards"> Awards</h2>
+        <ul style="display: flex; justify-content: space-around;">
+          <li>Masters in Nutritional and Wellness Adviser - 2008</li>
+          <li>Integrative Dietetics - 2019</li>
+          <li>Holistic Health - 2019</li>
+        </ul>
+      </article>
+
+      <div class="book_apintment">
+        <h3>Book an Appointment</h3>
+        <a href="home.php#appointments" class="cta-button">Book an Appointment</a>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

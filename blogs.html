@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs And Articals</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fefefe;
+    color: #fff;
+    padding: 20px;
+}
+
+nav {
+    background-color: #16a085;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+}
+
+article {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+#videos {
+  padding: 20px;
+  background-color: #f4f4f4;
+  height: 1600px;
+}
+
+
+
+.blog-post {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  margin-top: 20px;
+}
+
+.blog-video {
+  width: 40%;
+  height: 190px;
+  padding: 2px;
+  margin-top: 10px;
+}
+
+.blog-video iframe {
+  width: 130%;
+  height: 130%;
+  border: 2px solid black;
+}
+
+.blog-content {
+  width: 70%;
+  padding-left: 170px;
+  box-sizing: border-box;
+  margin-top: 80px;
+}
+
+.blog-title {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.blog-description {
+  margin-top: 10px;
+}
+
+.blog-description p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.logo{
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    text-align: start;
+}
+.logo i{
+    color: #16a085;
+}
+.scroll-top {
+            cursor: pointer;
+            text-align: center;
+            font-size: 22px;
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            line-height: 46px;
+            bottom: 46px;
+            right: 20px;
+            color: #fff;
+            opacity: 0.7;
+            z-index: 9999;
+            transition: all 0.3s;
+            background: #16a085!important;
+            display: none; /* Initially hidden */
+        }
+
+        /* Footer styles */
+footer {
+    background-color: #f0f0f0;
+    padding: 30px 0;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-contact,
+.footer-links,
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-contact h3,
+.footer-links h3,
+.footer-social h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-social ul {
+    list-style-type: none;
+    display: flex;
+    
+    
+}
+
+.footer-social ul li {
+    margin-right: 10px;
+    padding-left: 12px;
+    
+}
+
+
+.footer-social ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-social ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    color: #666
+}
+
+.footer-bottom ul {
+    list-style-type: none;
+}
+
+.footer-bottom ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-bottom ul li:last-child {
+    margin-right: 0;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.php" class="logo"><i class="fa-solid fa-heart-circle-plus"></i>&nbsp;HealthIn</a>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#articles">Articles</a></li>
+        </ul>
+    </nav>
+
+    <section id="videos">
+        <h2>Videos</h2>
+
+            <div class="blog-post" >
+                <div class="blog-video">
+                    <iframe width="760" height="100" src="https://www.youtube.com/embed/KazZpO7zbz0?si=r8bSzTrYk7nSV34R" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="blog-content">
+                    <h2 class="blog-title">World heart Day | Heart attack | Signs & symptoms (in hindi)</h2>
+                    <div class="blog-description">
+                        <p>We have Dr Md. Farhan Shikoh, Consultant Cardiologist, Orchid Medical Centre to share everything you need to know for proper care of your heart. </p>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin-top: 70px;">
+            
+            <div class="blog-post">
+                <div class="blog-video">
+                    <iframe width="760" height="105" src="https://www.youtube.com/embed/tVTwWfxzDe8" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="blog-content">
+                    <h2 class="blog-title">Understanding Diabetes</h2>
+                    <div class="blog-description">
+                        <p>Learn about the causes, symptoms, and treatment options for diabetes.</p>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin-top: 90px;">
+
+            <div class="blog-post">
+                <div class="blog-video">
+                    <iframe width="760" height="105" src="https://www.youtube.com/embed/H4k-1cKrb3c?si=I8GjSCwIMyfwVn1D" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="blog-content">
+                    <h2 class="blog-title">5 Superfoods for Modern Diseases</h2>
+                    <div class="blog-description">
+                        <p>In today's video Dr. Hansaji reveals to us 5 superfoods that are easily available at your local store. These superfoods help in improving sleep, 
+                            stamina and concentration and also aid for some of the modern day diseases like cancer, diabetes, acidity and gas. </p>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin-top: 80px;">
+
+            <div class="blog-post">
+                <div class="blog-video">
+                    <iframe width="760" height="105" src="https://www.youtube.com/embed/-hwxBBChA2c?si=FEL6sK4Gzp-eMVxb" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="blog-content">
+                    <h2 class="blog-title">The fastest way to reduce stress (in seconds)</h2>
+                    <div class="blog-description">
+                        <p>Are you breathing wrong? And can breathwork actually change your health and wellbeing? Here's the science.</p>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin-top: 90px;">
+
+            <div class="blog-post">
+                <div class="blog-video">
+                    <iframe width="760" height="105" src="https://www.youtube.com/embed/0vGWYrIpoII?si=nBUcyCJqp-gbfplc" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="blog-content">
+                    <h2 class="blog-title">Daily Routine as per AYURVEDA (Hindi) | Dincharya and Ratricharya EXPLAINED</h2>
+                    <div class="blog-description">
+                        <p>Know in detail about the General Daily Routine mentioned in Ayurveda which our ancestors in India used to follow in Ancient Times</p>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin-top: 90px;">
+    </section>
+
+    <section id="articles">
+        <h2 style="margin-top: 30px;">Articles</h2>
+        <div class="article-container">
+            <!-- Your article content goes here -->
+            <article>
+                <img src="https://medshadow.org/wp-content/uploads/2023/04/woman_smile-1200x800.jpeg" alt="" style="height: 385px;">
+                <h3>So, You Are 65. Now What? Medications All Seniors Should Know NOT to Take</h3>
+                <p>As you age, things change. You likely notice the little things over time, such as feeling like you pulled a muscle just by sneezing, or maybe you wake up with aches and pains that seemed to develop in your sleep.......</p>
+                <a href="artical1.html" style="text-decoration: none; color: #333; font-weight: bolder;"><p style="margin-left: 80%; margin-right: 10px; margin-top: 10px;">Read More</p></a>
+
+            </article>
+            <article>
+                <img src="images/guthealth_mentalhealth.jpg" alt="image" style="height: 385px;">
+                <h3>The Link Between Gut Health, Anxiety and Depression</h3>
+                <p>Are we anxious or depressed because we are eating poorly?  A growing cluster of studies about the gut-brain axis is showing that something as common as anxiety can be alleviated by eating foods that promote healthy gut bacteria.</p>
+                <a href="artical2.html" style="text-decoration: none; color: #333; font-weight: bolder;"><p style="margin-left: 80%; margin-right: 10px; margin-top: 10px;">Read More</p></a>
+
+            </article>
+        </div>
+    </section>
+
+    
+    <div class="scroll-top" style="background-color: #16a085;">
+        <i class="fa fa-angle-up"></i>
+    </div>
+
+     <!-- JavaScript to handle scroll-to-top functionality -->
+     <script>
+        // Get the button
+        var scrollToTopBtn = document.querySelector(".scroll-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        // Custom smooth scroll function
+        function scrollToTop(duration) {
+            var start = window.pageYOffset;
+            var startTime = performance.now();
+
+            function scroll(time) {
+                var elapsed = time - startTime;
+                var progress = Math.min(elapsed / duration, 1);
+                window.scrollTo(0, start - start * progress);
+                
+                if (elapsed < duration) {
+                    requestAnimationFrame(scroll);
+                } else {
+                    window.scrollTo(0, 0); // Ensure scroll position reaches exactly at the top
+                }
+            }
+
+            requestAnimationFrame(scroll);
+        }
+
+        // When the user clicks on the button, smoothly scroll to the top of the document
+        scrollToTopBtn.addEventListener("click", function() {
+            // Smooth scroll to the top of the document
+            scrollToTop(1500); // Adjust duration as needed (in milliseconds)
+        });
+    </script>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@HealthIn.com</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#mainhome">Home</a></li>
+                    <li><a href="#conditions">Conditions</a></li>
+                    <li><a href="#doctors">Doctors</a></li>
+                    <li><a href="#appointments">Appointment</a></li>
+                    <li><a href="#review">Review</a></li>
+                    <li><a href="#blogs">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 HealthIn Organization. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+</body>
+</html>
